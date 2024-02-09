@@ -1,8 +1,8 @@
 class Vehicle {
     //constructor
-    constructor (name, modle, year){
+    constructor (name, model, year){
         this.name = name;
-        this.modle = modle;
+        this.model = model;
         this.year = year;
     }
 
@@ -14,11 +14,11 @@ class Vehicle {
         return this.name;
     }
 
-    setModle(modle){
-        this.modle = modle;
+    setModle(model){
+        this.model = model;
     }
     getModle(){
-        return this.modle;
+        return this.model;
     }
 
     setYear(year){

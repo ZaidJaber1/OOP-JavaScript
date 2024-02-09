@@ -1,6 +1,8 @@
+const Vehicle = require('./Vehicle');
+
 class Car extends Vehicle {
-    constructor(name, modle, year, numCar){
-        super(name, modle, year);
+    constructor(name, model, year, numCar){
+        super(name, model, year);
         this.numCar = numCar;
     }
 
@@ -12,16 +14,20 @@ class Car extends Vehicle {
     }
 
     turnOn(){
-        console.log("Car is Turn On");
+        console.log(`${this.name} ${this.model} is Turn On`);
     }
 
     turnOff(){
-        console.log("Car is Turn Off");
+        console.log(`${this.name} ${this.model} is Turn Off`);
     }
 
     brake(){
-        console.log("Breake Car");
+        console.log(`Breake ${this.name} ${this.model}`);
     }
+
+    toString() {
+        return `${this.name} ${this.model} (${this.year}) - ${this.numCar}`;
+      }
 }
 
 module.exports = Car;
