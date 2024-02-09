@@ -26,5 +26,20 @@ class Vehicle {
     }
     getYear(){
         return this.year;
-    }   
+    }
+    
+    //Polymorphism
+    turnOn(){
+        console.log("Vehicle is Turn On");
+    }
+
+    turnOff(){
+        console.log("Vehicle is Turn Off");
+    }
+
+    brake(){
+        console.log("Breake Vehicle");
+    }
 }
+
+module.exports = Vehicle;
