@@ -7,4 +7,3 @@ myCar.turnOff();
 myCar.brake();
 
 console.log(myCar.toString());
-

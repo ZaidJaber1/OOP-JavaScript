@@ -1,44 +1,55 @@
 class Vehicle {
-    //constructor
-    constructor (name, model, year){
-        this.name = name;
-        this.model = model;
-        this.year = year;
+    #name;
+    #model;
+    #year;
+
+    constructor(name, model, year) {
+        this.#name = name;
+        this.#model = model;
+        this.#year = year;
     }
 
-    //Encapsulation
-    setName(name){
-        this.name = name;
-    }
-    getName(){
-        return this.name;
+    // Encapsulation
+    setName(name) {
+        this.#name = name;
     }
 
-    setModle(model){
-        this.model = model;
-    }
-    getModle(){
-        return this.model;
+    getName() {
+        return this.#name;
     }
 
-    setYear(year){
-        this.year = year;
+    setModel(model) {
+        this.#model = model;
     }
-    getYear(){
-        return this.year;
+
+    getModel() {
+        return this.#model;
     }
-    
-    //Polymorphism
-    turnOn(){
+
+    setYear(year) {
+        this.#year = year;
+    }
+
+    getYear() {
+        return this.#year;
+    }
+
+    // Polymorphism
+    turnOn() {
         console.log("Vehicle is Turn On");
     }
 
-    turnOff(){
+    turnOff() {
         console.log("Vehicle is Turn Off");
     }
 
-    brake(){
-        console.log("Breake Vehicle");
+    brake() {
+        console.log("Brake Vehicle");
+    }
+
+    // Abstraction
+    getInfo() {
+        return `${this.getName()} ${this.getModel()} (${this.getYear()})`;
     }
 }
 
