@@ -1,9 +1,12 @@
-class Vehicle {
+const VehicleInterface = require('./VehicleInterface');
+
+class Vehicle extends VehicleInterface {
     #name;
     #model;
     #year;
 
     constructor(name, model, year) {
+        super();
         this.#name = name;
         this.#model = model;
         this.#year = year;

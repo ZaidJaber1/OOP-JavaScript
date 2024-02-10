@@ -16,21 +16,24 @@ class Car extends Vehicle {
         return this.#numCar;
     }
 
+    // Override turnOn method
     turnOn() {
-        console.log(`${this.getInfo()} is Turn On`);
+        console.log(`${super.getInfo()} is Turn On`);
     }
 
+    // Override turnOff method
     turnOff() {
-        console.log(`${this.getInfo()} is Turn Off`);
+        console.log(`${super.getInfo()} is Turn Off`);
     }
 
+    // Override brake method
     brake() {
-        console.log(`Brake ${this.getInfo()}`);
+        console.log(`Brake ${super.getInfo()}`);
     }
 
     // Abstraction
     toString() {
-        return `${this.getInfo()} - ${this.#numCar}`;
+        return `${super.getInfo()} - ${this.#numCar}`;
     }
 }
 
